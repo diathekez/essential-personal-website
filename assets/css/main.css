@@ -33,6 +33,12 @@ body {
 	font-style: normal;
 	color: #F5F5DC;
 	font-size: var(--font_14);
+
+  /* --- Fade-in Animation --- */
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 1.5s ease-in forwards; /* Apply the animation */
+  animation-delay: 0.1s; /* Optional: A small delay before it starts */
+  /* ------------------------------------------------ */
   }
 
   a,
@@ -188,4 +194,14 @@ svg,img { max-width: 100%; height: auto; }
 
 .theme-particles .tab-nav__list li::before {
     background-color : var(--color-1-darker);
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
